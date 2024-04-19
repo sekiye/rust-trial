@@ -18,7 +18,7 @@ use std::io::prelude::*;
 use std::{error::Error, fmt};
 
 async fn get(url: String) -> Result<reqwest::Response, Box<dyn std::error::Error>> {
-    let keys = vec![
+    let keys = [
         env::var("DEVELOPER_KEY0")?,
         env::var("DEVELOPER_KEY1")?,
         env::var("DEVELOPER_KEY2")?,
