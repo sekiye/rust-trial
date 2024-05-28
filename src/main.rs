@@ -330,7 +330,7 @@ async fn get_locations_from_map(
     ids: HashSet<String>,
 ) -> Result<(HashMap<String, (f64, f64)>, HashSet<String>), Box<dyn std::error::Error>> {
     let google_maps_client =
-        ClientSettings::try_new(&env::var("GOOGLE_API_KEY")?).map_err(|err| {
+        ClientSettings::try_new(env::var("GOOGLE_API_KEY")?).map_err(|err| {
             eprintln!("Error creating Google Maps client: {}", err);
             GoogleMapsClientError::new(&format!("Error creating Google Maps client: {}", err))
         })?;
