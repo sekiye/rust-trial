@@ -481,9 +481,9 @@ checksum = "4271d37baee1b8c7e4b708028c57d816cf9d2434acb33a549475f78c181f6253"
 
 [[package]]
 name = "google_maps"
-version = "3.5.0"
+version = "3.5.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "d316f075e808803542941be4a63bd284c9c30f3cb86ae2b2715439bbae19f980"
+checksum = "ccbd22e79597098dbca59579da7dbbbfac1ad5e20ed92afb7aa4690e83cf8421"
 dependencies = [
  "backoff",
  "chrono",
