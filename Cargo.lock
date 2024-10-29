@@ -153,6 +153,12 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "9475866fec1451be56a3c2400fd081ff546538961565ccb5b7142cbd22bc7a51"
 
 [[package]]
+name = "beef"
+version = "0.5.2"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "3a8241f3ebb85c056b509d4327ad0358fbbba6ffb340bf388f26350aeda225b1"
+
+[[package]]
 name = "bitflags"
 version = "1.3.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -552,9 +558,9 @@ checksum = "4271d37baee1b8c7e4b708028c57d816cf9d2434acb33a549475f78c181f6253"
 
 [[package]]
 name = "google_maps"
-version = "3.7.0"
+version = "3.7.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "821e0f2d0bf57ffe0871ca12e6e2acc08f504b660eb19026250e4136ef5630b7"
+checksum = "ea99999d663cf5cafa4f64a4a8374e26c205b1dd93d987690961b1e5c7734249"
 dependencies = [
  "backoff",
  "chrono",
@@ -1606,6 +1612,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "05f0b376aada35f30a0012f5790e50aed62f91804a0682669aefdbe81c7fcb91"
 dependencies = [
  "ahash 0.8.11",
+ "beef",
  "getrandom",
  "halfbrown",
  "once_cell",
