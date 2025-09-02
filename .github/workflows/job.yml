@@ -35,7 +35,7 @@ jobs:
           WATCH_URL: ${{ secrets.WATCH_URL }}
         run: cargo run --bin=rust-trial --package=rust-trial --manifest-path=Cargo.toml --message-format=json remove_only
       - id: "auth"
-        uses: "google-github-actions/auth@v2"
+        uses: "google-github-actions/auth@v3"
         with:
           credentials_json: "${{ secrets.GCP_CREDENTIALS }}"
       - name: "Set up Cloud SDK"
