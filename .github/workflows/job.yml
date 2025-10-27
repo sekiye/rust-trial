@@ -45,7 +45,7 @@ jobs:
       - uses: montudor/action-zip@v1
         with:
           args: zip -qq -e --password="${{ secrets.ZIP_PASSWORD }}" geo.csv.gz.zip geo.csv.gz
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v5
         with:
           name: artifact
           path: ./geo.csv.gz.zip
