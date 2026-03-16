@@ -104,7 +104,7 @@ async fn get_queries() -> Result<Vec<String>, Box<dyn std::error::Error>> {
     let gzip = reqwest::get(url).await?.bytes().await?;
     let mut d = GzDecoder::new(&*gzip);
     let mut s = String::new();
-    d.read_to_string(&mut s).unwrap();
+    d.read_to_string(&mut s)?;
     let v: Vec<&str> = s.split('\n').collect();
     let mut ret: Vec<String> = vec![];
     for id in v {
@@ -118,7 +118,7 @@ async fn get_blacklist() -> Result<HashSet<String>, Box<dyn std::error::Error>> 
     let gzip = reqwest::get(url).await?.bytes().await?;
     let mut d = GzDecoder::new(&*gzip);
     let mut s = String::new();
-    d.read_to_string(&mut s).unwrap();
+    d.read_to_string(&mut s)?;
     let v: Vec<&str> = s.split('\n').collect();
     let mut ret = HashSet::<String>::new();
     for id in v {
@@ -144,7 +144,7 @@ async fn get_previous_id_list() -> Result<HashMap<String, (f64, f64)>, Box<dyn s
     let gzip = reqwest::get(url).await?.bytes().await?;
     let mut d = GzDecoder::new(&*gzip);
     let mut s = String::new();
-    d.read_to_string(&mut s).unwrap();
+    d.read_to_string(&mut s)?;
     let mut rdr = ReaderBuilder::new().from_reader(s.as_bytes());
     while let Some(result) = rdr.records().next() {
         let record = result?;
@@ -290,7 +290,7 @@ async fn get_non_live_camera_list() -> Result<HashSet<String>, Box<dyn std::erro
     let gzip = reqwest::get(url).await?.bytes().await?;
     let mut d = GzDecoder::new(&*gzip);
     let mut s = String::new();
-    d.read_to_string(&mut s).unwrap();
+    d.read_to_string(&mut s)?;
     let v: Vec<&str> = s.split('\n').collect();
     let mut ret = HashSet::<String>::new();
     for id in v {
